@@ -23,7 +23,7 @@ export default function LoginForm(props: any) {
 
     const login = async () => {
         if (!username || !password) {
-            alert("Hey, c'mon ... username and password are required!");
+            alert("Informe seu nome de usuário e senha para realizar o login");
             return;
         }
 
@@ -37,10 +37,10 @@ export default function LoginForm(props: any) {
             return;
         } catch (ex) {
             if (ex instanceof BadCredentialsAuthError) {
-                alert("Wrong username or password.");
+                alert("Usuário ou senha inválidos.");
 
             } else {
-                alert("Ouch, something is really wrong... :(");
+                alert("Ops! Algo deu errado!!:(");
             }
         }
 
@@ -131,7 +131,7 @@ const styles = StyleSheet.create({
         justifyContent: "flex-start",
     },
     accountActionText: {
-        color: "#00A6FF",
+        color: "#FF69B4",
     },
     forgetPasswordLink: {
         flex: 1,
@@ -143,7 +143,7 @@ const styles = StyleSheet.create({
     },
     btnLogin: {
         borderRadius: 3,
-        backgroundColor: "#42B0BF",
+        backgroundColor: "#FF00FF",
         width: Dimensions.get("window").width * 0.9,
         height: Dimensions.get("screen").height * 0.08,
         alignContent: "center",
